@@ -1,3 +1,4 @@
 # Packages
 *.egg
 *.egg-info
+*.pyc

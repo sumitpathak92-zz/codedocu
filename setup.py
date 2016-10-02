@@ -18,18 +18,20 @@ mapping those to the respective modules and generating a meaningful documentatio
 """
 
 setup(name='codedocu',
-      version='0.1',
+      version='0.0.2',
       description='Documenting python code made easy!',
       url='http://github.com/sumitpathak92/codedocu',
       classifiers=[
-          'Development Status :: 1 - Alpha',
+          'Development Status :: 3 - Alpha',
           'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 2.7',
-          'Topic :: Text Processing :: Code Documentation',
           ],
       author='Sumit Pathak',
       author_email='pathaksumit92@gmail.com',
       license='MIT',
       package=['codedocu'],
+      entry_points={
+          'console_scripts': ['codedoc = codedocu.__init__:first'],
+              },
       include_package_data=True,
       zip_safe=False)

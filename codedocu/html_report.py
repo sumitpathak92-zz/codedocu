@@ -8,16 +8,13 @@ from __init__ import first
 def main():
     doc = dominate.document(title='ALPS Code Documentation')
     module_name = 'Content Gap Analysis' #TODO fetch it dynamically
-
-    api_name = first()[2]
+    print first()
+    try:
+        api_name = first()[2]
+    except:
+        api_name = 'Some Dummy Name'
     api_comment = ''
-    for k, v in first().iteritems():
-        try:
-            api_comment += first()[k+1]
-        except KeyError, e:
-            pass
     print api_comment
-    #api_comment = first()[3] + first()[4]
 
     with doc.head:
         link(rel='stylesheet', href='style.css')

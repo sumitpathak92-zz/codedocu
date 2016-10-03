@@ -18,7 +18,7 @@ mapping those to the respective modules and generating a meaningful documentatio
 """
 
 setup(name='codedocu',
-      version='0.0.2',
+      version='0.0.3',
       description='Documenting python code made easy!',
       url='http://github.com/sumitpathak92/codedocu',
       classifiers=[

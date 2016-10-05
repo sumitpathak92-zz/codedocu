@@ -4,9 +4,6 @@
 import sys
 from setuptools import setup
 
-def readme():
-    with open('README.rst') as f:
-        return f.read()
 
 VERSION = '0.0.1'
 
@@ -18,7 +15,7 @@ mapping those to the respective modules and generating a meaningful documentatio
 """
 
 setup(name='codedocu',
-      version='0.0.3',
+      version='0.0.4',
       description='Documenting python code made easy!',
       url='http://github.com/sumitpathak92/codedocu',
       classifiers=[
@@ -31,7 +28,9 @@ setup(name='codedocu',
       license='MIT',
       package=['codedocu'],
       entry_points={
-          'console_scripts': ['codedoc = codedocu.__init__:first'],
-              },
+          'console_scripts': ['codedoc = codedocu.__init__:first',
+                              'codedoc generate = codedocu.html_report1:main'
+                              ],
+          },
       include_package_data=True,
       zip_safe=False)
